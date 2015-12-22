@@ -1,0 +1,45 @@
+.wall{ width:990px;margin-right:auto; margin-left:auto;}
+ .mw-a-type{color:#777777;}
+ .mw-a-type:hover{ color:#E31F1F;text-decoration: none;}
+
+.navbar-hd .q {color:#E31F1F!important}
+.navbar-pipe{ float:left;height:35px; line-height:35px;}
+.navbar-hd{ position:relative;float:left; height:35px; line-height:35px; padding:0 6px; }
+.login-wrap{ position:relative;height:480px; margin:10px 0 20px 0;}
+.login-banner{ position:absolute;width:100%;top:0;left:0;background-color:#2f3142;}
+.login-form{ position:relative; float:right; background:#FFF;width:290px;top:55px;height:380px;z-index:4;padding:20px;}
+.login-name{ display:block; width:306px; overflow:hidden; height27px; cursor:default;}
+.login-name h1{ position:relative; height:27px; line-height:27px; top:-5px; float:left; color:#666; font:20px "microsoft yahei","\5b8b\4f53";}
+.login-mid{ min-height:30px;}
+.login-form .item{ position:relative; border:1px solid #bdbdbd; height:38px; width:254px; margin-bottom:20px;}
+.login-form  .login-lable{ position:absolute; z-index:100001; top:0; left:0; width:38px; height:36px; border-right:1px solid#bdbdbd; background:url(../image/login/pwd-icons-new.png) no-repeat; margin-bottom:0}
+.login-form  .name-login { background-position:0 0;}
+.login-form  .pwd-login  { background-position:-48px 0;}
+.login-form  .form .itxt{ position:relative; line-height:36px; height:36px; border:0; padding:10px 0 10px 50px; width:252px; float:left; overflow:hidden; font-size:14px; font-family:'\5b8b\4f53'; }
+.login-form  .form label{ float:none;}
+.login-form  .safe{ position:relative; color:#666;}
+.login-form  .form .mwcheckbox{ vertical-align:middle; margin-right:3px;}
+.login-form  .item-fore3, .item-fore4 { border:none;}
+.login-form  .item-fore3 { height:18px;}
+.login-form  .forget-pwd{ position:absolute; right:0; top:0; margin:0;}
+.login-form  .loginbtn{ border:1px solid #cb2a2d; margin:0 auto; height:36px; position:relative;}
+.login-form .btn-img{ border:1px solid #e85356; background:#e4393c; display:block; width:252px; height:34px; line-height:34px; color:#fff; font-size:20px; font-family:'\5fae\8f6f\96c5\9ed1'; text-align:center; cursor:pointer;}
+.login-form .loginbtn a:hover{color:#fff; text-decoration:none;}
+.login-form .coagent h3{ font-weight:400; color:#999; }
+.login-form .coagent .login-tool{ width:250px; height:28px; float:left; position:relative;padding:5px 0;}
+.login-form .coagent .tool{ margin:0 5px;}
+.login-form .coagent .tool-first{ margin:0 5px 0 0;}
+.login-form  .loginbtn a:hover{color:#fff; text-decoration:none;}
+.login-form .coagent h5{ font-weight:600; font-size:12px; margin:0}
+#footer  .links{ position:relative; display:block; text-align:center; overflow:hidden;}
+#footer  .links a{ margin:0 10px;}
+#footer  .copyright{ text-align:center; margin:10px 0;}
+
+.header .logo {position:relative; padding:10px 0; float:left; width:300px; height:74px;}
+.header .searchbox{ height:40px; position:relative; float:left; width:600px; margin:20px 30px 0 30px;}
+.header .searchbox .form{ height:40px; width:auto;}
+.header .searchbox .text{ float:left; width:370px; height:36px; line-height:24px; color:#666; padding:4px; margin-bottom:4px; border-width:2px 0 2px 2px; border-color:#B61D1D; border-style:solid; font-size:14px; font-family:"microsoft yahei"; outline:0;}
+.header .searchbox .button{float:left; width:82px; height:36px; background:#B61D1D; border:none;line-height:1; color:#fff; font-size:16px; cursor:pointer;font-family: "Microsoft YaHei"; }
+.header .hotword{ float:left; width:518px; height:24px; line-height:24px; position:relative; margin-left:30px;}
+.header .hotword a{ float:left; margin-right:10px; white-space:nowrap;}
+
