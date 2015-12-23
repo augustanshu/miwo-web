@@ -24,7 +24,7 @@
 <body>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<div class="navbar-header">
+			<div class="header">
 			<ul class="nav navbar-nav">
 			<li><div class="navbar-hd"><a href="{{ url('/') }}">觅我首页</a></div></li>
 			@if(Auth::guest())
