@@ -6,18 +6,33 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-class ProductController extends Controller
+use Response;
+use Theme;
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+	 
+	 public function __construct()
+    {
+        $this->middleware('auth.role:admin');
+        $this->SetupTheme(config('cms.themes.admin.theme'), config('cms.themes.admin.layout'));
+    }
+	 
+   public function home()
+    {
+		  return $this->theme->of('admin::user.home')->render();
+
+    }
+
     public function index()
     {
-        //
+       
     }
+
 
     /**
      * Show the form for creating a new resource.

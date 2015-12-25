@@ -136,7 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Laravel\Socialite\SocialiteServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -144,6 +144,18 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+		Teepluss\Theme\ThemeServiceProvider::class,
+		Former\FormerServiceProvider::class,
+		
+
+        Lavalite\Menu\Providers\MenuServiceProvider::class,
+        Lavalite\Filer\Providers\FilerServiceProvider::class,
+        Lavalite\Page\Providers\PageServiceProvider::class,
+        Lavalite\Settings\Providers\SettingsServiceProvider::class,
+        Lavalite\Task\Providers\TaskServiceProvider::class,
+        Lavalite\Message\Providers\MessageServiceProvider::class,
+        Lavalite\Calendar\Providers\CalendarServiceProvider::class,
+		Lavalite\User\Providers\UserServiceProvider::class,
 
     ],
 
@@ -193,6 +205,18 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+		'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+	    'Theme'     => Teepluss\Theme\Facades\Theme::class,
+		'Former'    => Former\Facades\Former::class,
+		
+		'Menu'     => Lavalite\Menu\Facades\Menu::class,
+        'Page'     => Lavalite\Page\Facades\Page::class,
+        'Filer'    => Lavalite\Filer\Facades\Filer::class,
+        'User'     => Lavalite\User\Facades\User::class,
+        'Settings' => Lavalite\Settings\Facades\Settings::class,
+        'Task'     => Lavalite\Task\Facades\Task::class,
+        'Calendar' => Lavalite\Calendar\Facades\Calendar::class,
+        'Message'  => Lavalite\Message\Facades\Message::class,
 
     ],
 

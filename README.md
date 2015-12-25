@@ -25,3 +25,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+###注意
+Lavalite中User无法composer方法获得，下载后，config/app.php注册后，package添加文件，并在vendor/composer/autoload-namespace中加入	'Lavalite\\User\\' => array($vendorDir . '/lavalite/user/src'),

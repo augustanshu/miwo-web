@@ -23,10 +23,21 @@
         "Illuminate\\Translation\\TranslationServiceProvider",
         "Illuminate\\Validation\\ValidationServiceProvider",
         "Illuminate\\View\\ViewServiceProvider",
+        "Laravel\\Socialite\\SocialiteServiceProvider",
         "App\\Providers\\AppServiceProvider",
         "App\\Providers\\AuthServiceProvider",
         "App\\Providers\\EventServiceProvider",
-        "App\\Providers\\RouteServiceProvider"
+        "App\\Providers\\RouteServiceProvider",
+        "Teepluss\\Theme\\ThemeServiceProvider",
+        "Former\\FormerServiceProvider",
+        "Lavalite\\Menu\\Providers\\MenuServiceProvider",
+        "Lavalite\\Filer\\Providers\\FilerServiceProvider",
+        "Lavalite\\Page\\Providers\\PageServiceProvider",
+        "Lavalite\\Settings\\Providers\\SettingsServiceProvider",
+        "Lavalite\\Task\\Providers\\TaskServiceProvider",
+        "Lavalite\\Message\\Providers\\MessageServiceProvider",
+        "Lavalite\\Calendar\\Providers\\CalendarServiceProvider",
+        "Lavalite\\User\\Providers\\UserServiceProvider"
     ],
     "eager": [
         "Illuminate\\Auth\\AuthServiceProvider",
@@ -43,7 +54,16 @@
         "App\\Providers\\AppServiceProvider",
         "App\\Providers\\AuthServiceProvider",
         "App\\Providers\\EventServiceProvider",
-        "App\\Providers\\RouteServiceProvider"
+        "App\\Providers\\RouteServiceProvider",
+        "Teepluss\\Theme\\ThemeServiceProvider",
+        "Lavalite\\Menu\\Providers\\MenuServiceProvider",
+        "Lavalite\\Filer\\Providers\\FilerServiceProvider",
+        "Lavalite\\Page\\Providers\\PageServiceProvider",
+        "Lavalite\\Settings\\Providers\\SettingsServiceProvider",
+        "Lavalite\\Task\\Providers\\TaskServiceProvider",
+        "Lavalite\\Message\\Providers\\MessageServiceProvider",
+        "Lavalite\\Calendar\\Providers\\CalendarServiceProvider",
+        "Lavalite\\User\\Providers\\UserServiceProvider"
     ],
     "deferred": {
         "command.app.name": "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider",
@@ -129,7 +149,10 @@
         "auth.password": "Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider",
         "auth.password.tokens": "Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider",
         "translator": "Illuminate\\Translation\\TranslationServiceProvider",
-        "translation.loader": "Illuminate\\Translation\\TranslationServiceProvider"
+        "translation.loader": "Illuminate\\Translation\\TranslationServiceProvider",
+        "Laravel\\Socialite\\Contracts\\Factory": "Laravel\\Socialite\\SocialiteServiceProvider",
+        "former": "Former\\FormerServiceProvider",
+        "Former\\Former": "Former\\FormerServiceProvider"
     },
     "when": {
         "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider": [],
@@ -143,6 +166,8 @@
         "Illuminate\\Queue\\QueueServiceProvider": [],
         "Illuminate\\Redis\\RedisServiceProvider": [],
         "Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider": [],
-        "Illuminate\\Translation\\TranslationServiceProvider": []
+        "Illuminate\\Translation\\TranslationServiceProvider": [],
+        "Laravel\\Socialite\\SocialiteServiceProvider": [],
+        "Former\\FormerServiceProvider": []
     }
 }
