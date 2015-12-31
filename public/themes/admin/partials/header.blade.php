@@ -16,46 +16,54 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
+				 
                 <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-envelope-o"></i>
-                  <span class="label label-success">4</span>
+                  <span class="label label-success"></span>
                 </a>
                 {!! Message::display('drop') !!}
                 </li>
+				
                 <!-- Notifications: style can be found in dropdown.less -->
+				
                 <li class="dropdown notifications-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-calendar"></i>
-                  <span class="label label-warning">10</span>
+                  <span class="label label-warning"></span>
                 </a>
-                {!! Calendar::display('drop') !!}
+                 {!! Calendar::display('drop') !!}
                 </li>
+				
                 <!-- Tasks: style can be found in dropdown.less -->
+				
                 <li class="dropdown tasks-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-flag-o"></i>
-                  <span class="label label-danger">9</span>
+                  <span class="label label-danger"></span>
                 </a>
                 {!! Task::display('drop') !!}
                 </li>
+				
                 <!-- User Account: style can be found in dropdown.less -->
+				
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                    <img src="{!!User::users('picture')!!}" class="user-image" alt="User Image"/>
                     <span class="hidden-xs">{!!User::users('name')!!}</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <!-- User image -->
+                        
+						
                         <li class="user-header">
-                            <!--<img src="{!!User::users('picture')!!}" class="img-circle" alt="User Image" />
+                           <img src="{!!User::users('picture')!!}" class="img-circle" alt="User Image" />
                             <p>
                             {!!User::users('name')!!} - {!!User::users('designation')!!}
-                            <small>Member since {!!User::users('joined')!!}</small>
+                            <small>Member since {!!User::users('created_at')!!}</small>
                             </p>
-							-->
                         </li>
                         <!-- Menu Body -->
+					    <!--
                         <li class="user-body">
                             <div class="col-xs-12 text-center">
                               <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
@@ -63,13 +71,14 @@
                               <a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
                             </div>
                         </li>
+						-->
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="/admin/profile" class="btn btn-default btn-flat">Profile</a>
+                                <a href="/admin/profile" class="btn btn-default btn-flat">用户资料</a>
                             </div>
                             <div class="pull-right">
-                                <a href="/auth/admin/logout" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="/auth/admin/logout" class="btn btn-default btn-flat">安全退出</a>
                             </div>
                         </li>
                     </ul>

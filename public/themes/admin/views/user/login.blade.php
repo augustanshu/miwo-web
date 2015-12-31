@@ -23,16 +23,16 @@
       <div class="row">
         <div class="col-xs-8">
 
-              {!! Former::checkbox('rememberme', 'Remember me ')->inline()!!}
+              {!! Former::checkbox('rememberme', '记住用户 ')->inline()!!}
 
         </div><!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
         </div><!-- /.col -->
       </div>
     {!!Former::Close()!!}
 
-    <a href="{!! URL::to('password/admin/email') !!}">I forgot my password</a><br>
+    <a href="{!! URL::to('password/admin/email') !!}">忘记密码</a><br>
   </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->
 <script>

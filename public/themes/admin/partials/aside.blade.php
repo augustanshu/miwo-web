@@ -25,12 +25,12 @@
     <!-- /.search form -->
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
-      <li class="header">MAIN NAVIGATION<d/li>
+      <li class="header">导航<d/li>
       {!!Menu::menu('admin', 'admin')!!}
       <li class="header">Masters</li>
-      <li><a href="{{ URL::to('admin/settings/setting') }}"><i class="fa fa-circle-o text-red"></i> <span>Settings</span></a></li>
+      <li><a href="{{ URL::to('admin/settings/setting') }}"><i class="fa fa-circle-o text-red"></i> <span>设置</span></a></li>
       <li><a href="{{ URL::to('admin/masters') }}"><i class="fa fa-circle-o text-yellow"></i> <span>Masters</span></a></li>
-      <li><a href="{{ URL::to('admin/reports') }}"><i class="fa fa-circle-o text-aqua"></i> <span>Reports</span></a></li>
+      <li><a href="{{ URL::to('admin/reports') }}"><i class="fa fa-circle-o text-aqua"></i> <span>报告</span></a></li>
     </ul>
   </section>
   <!-- /.sidebar -->
