@@ -8,6 +8,7 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
 		"anahkiasen/former": "4.0.*@dev",
+		"laravel/socialite": "^3.0@dev",
 		"teepluss/theme": "dev-master",
 		"lavalite/user": "dev-master",
 		 "lavalite/menu": "3.0.*",
@@ -17,8 +18,7 @@
         "lavalite/task": "3.0.*",
         "lavalite/message": "3.0.*",
         "lavalite/calendar": "3.0.*",
-        "laravel/socialite": "^3.0@dev",
-		 "lavalite/user": "3.0.*"
+		 "lavalite/user": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -61,6 +61,6 @@
         "preferred-install": "dist"
     },
 	"remove":{
-		 
+		  "frozennode/administrator": " 5.*"
 	}
 }
