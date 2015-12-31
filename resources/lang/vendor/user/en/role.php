@@ -24,8 +24,8 @@ return [
         "updated_at"        => "Updated at",
     ],
 
-    "name"            => "Role",
-    "names"           => "Roles",
+    "name"            => "权限",
+    "names"           => "权限",
 
     // Tab labels
     "tab" => [
@@ -34,7 +34,7 @@ return [
 
     // Texts  for the module
     "text" => [
-        'preview' => 'Click on the below list for preview'
+        'preview' => '单击以下列表进行预览'
     ],
 
 

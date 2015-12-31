@@ -104,31 +104,31 @@ return [
                         "reporting_to"                 => "Reporting to",
                         "designation"                  => "Designation",
                         "department"                   => "Department",
-                        "name"                         => 'Name',
-                        "password"                     => 'Password',
-                        "password_confirmation"        => 'Confirm Password',
-                        "first_name"                   => 'First Name',
-                        "last_name"                    => 'Last Name',
-                        "sex"                          => 'Sex',
-                        "date_of_birth"                => 'Date of Birth',
-                        "photo"                        => 'Photo',
-                        "mobile"                       => 'Mobile',
-                        "phone"                        => 'Phone',
-                        "address"                      => 'Address',
-                        "street"                       => 'Street',
-                        "city"                         => 'City',
-                        "district"                     => 'District',
-                        "state"                        => 'State',
-                        "country"                      => 'Country',
-                        "web"                          => 'Web',
-                        "email"                        => 'E-mail Address',
+                        "name"                         => '用户名',
+                        "password"                     => '密码',
+                        "password_confirmation"        => '再次输入密码',
+                        "first_name"                   => '姓',
+                        "last_name"                    => '名',
+                        "sex"                          => '性别',
+                        "date_of_birth"                => '生日',
+                        "photo"                        => '照片',
+                        "mobile"                       => '手机',
+                        "phone"                        => '电话',
+                        "address"                      => '地址',
+                        "street"                       => '街道',
+                        "city"                         => '城市',
+                        "district"                     => '区',
+                        "state"                        => '州/省',
+                        "country"                      => '国家',
+                        "web"                          => '网页',
+                        "email"                        => '邮箱地址',
                         "type"                         => 'Type',
-                        "dob"                          => 'Date of Birth',
-                        "designation"                  => 'Designation',
+                        "dob"                          => '生日',
+                        "designation"                  => '身份',
                         "activated"                    => 'Active',
                         "status"                       => 'Status',
                         "minutes"                      => 'Duration',
-                        "login"                        => 'Login',
+                        "login"                        => '登录',
                         ],
 
     'placeholder'       => [
@@ -160,8 +160,8 @@ return [
                         "minutes"                      => 'Minutes',
                         ],
 
-                        "name"              => 'User',
-                        "names"             => 'Users',
+                        "name"              => '用户',
+                        "names"             => '用户s',
 
     // Tab labels
     "tab" => [
@@ -171,7 +171,7 @@ return [
 
     // Texts  for the module
     "text" => [
-        'preview' => 'Click on the below list for preview'
+        'preview' => '单击以下列表进行预览'
     ],
 
 ];
