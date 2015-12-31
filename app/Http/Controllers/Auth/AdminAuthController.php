@@ -59,7 +59,7 @@ class AdminAuthController extends Controller
     {
         User::logout();
         event('user.logout');
-
         return redirect()->to($this->loginPath);
+		
     }
 }

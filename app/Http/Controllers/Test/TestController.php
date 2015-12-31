@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Goods\GoodsClass;
 
 class TestController extends Controller
 {
@@ -14,11 +15,91 @@ class TestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+	 #protected $guarded=['parent_id'];
     public function index()
     {
-       return view('Test.1');
+	    GoodsClass::chunk(2,function($goodsclass){
+          foreach ($goodsclass as $post) {
+        echo $post->name.'<br>';
+    }
+});
     }
 
+	 public function create_1()
+    {
+		$goodsclass=new GoodsClass();
+       $goodsclass->name='新大类';
+	   $goodsclass->parent_id=0;
+	   $goodsclass->order=0;
+	   if($goodsclass->save()){
+		   echo 'ok';
+	   }
+	   else
+	   {
+		   echo 'fail';
+	   }
+    }
+	public function create_2()
+	{
+		$input = [
+    'name'=>'test5',
+    'order'=>1,
+    'parent_id'=>100
+
+      ];
+	  
+$goodclass = GoodsClass::create($input);
+dd($goodclass);
+	}
+	
+	public function update_1()
+	{
+		$goodsclass=GoodsClass::where('name','=','大类5')->first();
+		$goodsclass->name='大类55';
+		if($goodsclass->save())
+		{
+			echo 'ok';
+		}
+		else
+		{
+			echo 'fail';
+		}
+	}
+	public function update_2()
+	{
+		$goodclass=GoodsClass::where('name','=','大类5')->first();
+		$input=['name'=>'大类55'];
+		if($goodclass->update($input))
+		{
+			echo 'okk';
+		}
+		else
+		{
+			echo 'fail';
+		}
+	}
+	
+	public function delete_1()
+	{
+		$goodclass=GoodsClass::where('name','=','test5')->first();
+		$goodclass->delete();
+		if($goodclass->trashed())
+		{
+			echo 'ok';
+		}
+		else
+		{
+			echo 'fail';
+		}
+	}
+	public function get_1()
+	{
+		$goodsclasses=GoodsClass::Popular()->orderBy('order','desc')->get();
+		foreach($goodsclasses as $goodsclass)
+		{
+			echo $goodsclass->name;
+		}
+	}
     /**
      * Show the form for creating a new resource.
      *
@@ -84,4 +165,38 @@ class TestController extends Controller
     {
         //
     }
+	public function request(Request $request)
+	{
+		$name=$request->input('name','default');
+		return '名字为：'.$name;
+	}
+	
+	public function request2(Request $request,$name)
+	{
+		#$name=$request->path();
+		return '名字为：'.$name;
+	}
+	
+	public function method(Request $request)
+	{
+		$method=$request->method();
+		return $method;
+	}
+	
+	public function requestall(Request $request)
+	{
+		$input=$request->all();
+		return $input;
+	}
+	public function cookie(Request $request)
+	{
+		$input=$request->cookie('Name');
+		return $input;
+	}
+	
+	public function getPage()
+	{
+		$goodsclass=GoodsClass::all();
+		dd($goodsclass);
+	}
 }

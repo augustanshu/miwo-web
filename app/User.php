@@ -85,6 +85,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return URL::to('images/avatar/male.png');
     }
 
+	public function getTestAttribute()
+	{
+		return URL::to('images/avatar/male.png');
+	}
+	
     /**
      * Returns the joined date of the user.
      *

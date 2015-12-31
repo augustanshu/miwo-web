@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Goods\GoodsClass;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,6 +16,11 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(public_path('themes/admin/views'), 'admin');
         $this->loadViewsFrom(public_path('themes/public/views'), 'public');
+		GoodsClass::creating(function()
+		{
+			echo '111111';
+		});
+		
     }
 
     /**
