@@ -205,6 +205,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+		
 		'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 	    'Theme'     => Teepluss\Theme\Facades\Theme::class,
 		'Former'    => Former\Facades\Former::class,

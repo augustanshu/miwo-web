@@ -40,8 +40,8 @@ return [
 
                     ],
     'role' => [
-                    'Name'          => 'Role',
-                    'name'          => 'role',
+                    'Name'          => '角色',
+                    'name'          => '角色',
                     'table'         => 'roles',
                     'model'         => 'Lavalite\User\Models\Role',
                     'permissions'   => ['view', 'create', 'edit', 'delete'],
@@ -64,8 +64,8 @@ return [
                     ],
 
     'user' => [
-                    'Name'          => 'User',
-                    'name'          => 'user',
+                    'Name'          => 'User2',
+                    'name'          => 'user2',
                     'table'         => 'users',
                     'model'         => 'Lavalite\User\Models\User',
                     'permissions'   => ['view', 'create', 'edit', 'delete'],

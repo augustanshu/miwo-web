@@ -7,7 +7,7 @@ return [
 
     'locale'    => 'en',
 
-    'locales'   => ['en', 'fr'],
+    'locales'   => [],
 
     'themes'    => [
                     'admin'  => ['theme' => 'admin',     'layout' => 'default'],
