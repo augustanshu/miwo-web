@@ -18,7 +18,9 @@
         "lavalite/task": "3.0.*",
         "lavalite/message": "3.0.*",
         "lavalite/calendar": "3.0.*",
-		 "lavalite/user": "dev-master"
+		 "lavalite/user": "dev-master",
+        "barryvdh/laravel-debugbar": "^2.1",
+		"codesleeve/laravel-stapler": "1.0.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -61,6 +63,7 @@
         "preferred-install": "dist"
     },
 	"remove":{
-		  "frozennode/administrator": " 5.*"
+		  "frozennode/administrator": " 5.*",
+		   "rap2hpoutre/laravel-log-viewer": "^0.5.2"
 	}
 }
