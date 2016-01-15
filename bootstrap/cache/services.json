@@ -37,7 +37,12 @@
         "Lavalite\\Task\\Providers\\TaskServiceProvider",
         "Lavalite\\Message\\Providers\\MessageServiceProvider",
         "Lavalite\\Calendar\\Providers\\CalendarServiceProvider",
-        "Lavalite\\User\\Providers\\UserServiceProvider"
+        "Lavalite\\User\\Providers\\UserServiceProvider",
+        "App\\Providers\\CategoryServiceProvider",
+        "App\\Providers\\Goods\\BrandServiceProvider",
+        "App\\Providers\\TestServiceProvider",
+        "Barryvdh\\Debugbar\\ServiceProvider",
+        "Codesleeve\\LaravelStapler\\Providers\\L5ServiceProvider"
     ],
     "eager": [
         "Illuminate\\Auth\\AuthServiceProvider",
@@ -63,7 +68,12 @@
         "Lavalite\\Task\\Providers\\TaskServiceProvider",
         "Lavalite\\Message\\Providers\\MessageServiceProvider",
         "Lavalite\\Calendar\\Providers\\CalendarServiceProvider",
-        "Lavalite\\User\\Providers\\UserServiceProvider"
+        "Lavalite\\User\\Providers\\UserServiceProvider",
+        "App\\Providers\\CategoryServiceProvider",
+        "App\\Providers\\Goods\\BrandServiceProvider",
+        "App\\Providers\\TestServiceProvider",
+        "Barryvdh\\Debugbar\\ServiceProvider",
+        "Codesleeve\\LaravelStapler\\Providers\\L5ServiceProvider"
     ],
     "deferred": {
         "command.app.name": "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider",

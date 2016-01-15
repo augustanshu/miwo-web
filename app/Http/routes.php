@@ -35,6 +35,17 @@ Route::group(['prefix'=>'test','namespace'=>'Test'],function(){
 	Route::get('update','TestController@update_1');
 	Route::get('delete','TestController@delete_1');
 	Route::get('get_1','TestController@get_1');
+	Route::get('cache/{id}','TestController@get_cache');
+	Route::get('request/name={id}','TestController@get_request');
+	Route::get('share',function(){
+		return view('Test.hello');
+	Route::get('service','TestController@service');
+	});
+	Route::get('0','TestController@test0');
+});
+
+Route::group(['prefix'=>'test2'],function(){
+Route::get('1','CategoryController@doit');
 });
 
 Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
@@ -42,5 +53,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
 });
 
 Route::group(['prefix'=>'admin/goods','namespace'=>'Goods'],function(){
-	Route:resource('goodsclass','GoodsClassAdminController');
+	Route::resource('category','CategoryAdminController');
+	Route::resource('subcategory','SubCategoryAdminController');
+	Route::resource('brand','BrandAdminController');
 });

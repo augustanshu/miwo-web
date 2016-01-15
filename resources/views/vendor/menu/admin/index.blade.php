@@ -47,7 +47,7 @@
 <script type="text/javascript">
 var oTable;
 $(document).ready(function(){
-
+/*
     var updateMenu = function(e)
     {
         var out = $(e.target).nestable('serialize');
@@ -75,7 +75,7 @@ $(document).ready(function(){
     };
 
     $('.dd').nestable().on('change', updateMenu);
-
+*/
 
     $('#menu-entry').load('{{URL::to('admin/menu/menu/')}}/{{$parent->id}}');
 

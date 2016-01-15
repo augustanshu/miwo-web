@@ -46,6 +46,7 @@
             contentType: false,
             success:function (data, textStatus, jqXHR)
             {
+				 window.location.reload();
             },
             error: function(jqXHR, textStatus, errorThrown)
             {

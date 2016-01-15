@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Goods\GoodsClass;
-
+use Cache;
+use App;
+use App\Interfaces\TestRepositoryInterface;
+use Test;
 class TestController extends Controller
 {
     /**
@@ -16,6 +19,19 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
 	 #protected $guarded=['parent_id'];
+	 public function __construct(TestRepositoryInterface $test)
+	 {
+		 $this->model=$test;
+	 }
+	 
+	 public function test0()
+	 {
+	    #$this->test->call();
+		$test=App::make('test');
+		$test->something();
+		#Test::dosomething();
+	 }
+	 
     public function index()
     {
 	    GoodsClass::chunk(2,function($goodsclass){
@@ -99,6 +115,18 @@ dd($goodclass);
 		{
 			echo $goodsclass->name;
 		}
+	}
+	
+	public function get_request(Request $request)
+	{
+		$input=$request->all();
+		dd($input);
+	}
+	
+	public function get_cache($id)
+	{
+
+		
 	}
     /**
      * Show the form for creating a new resource.

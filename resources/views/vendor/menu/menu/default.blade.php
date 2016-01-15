@@ -1,5 +1,6 @@
 <ul class="nav nav-pills pull-right">
     <?php $i=0?>
+	<?php dd($menu)?>
     @while (isset($menu['0.' . ++$i]))
     @if (($menu['0.' . $i]->parent))
     <li class="{{ ($menu['0.' . $i]->active) ?  'active' : '' }}"  role="button" class="dropdown-toggle" data-toggle="dropdown">

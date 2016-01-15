@@ -156,6 +156,13 @@ return [
         Lavalite\Message\Providers\MessageServiceProvider::class,
         Lavalite\Calendar\Providers\CalendarServiceProvider::class,
 		Lavalite\User\Providers\UserServiceProvider::class,
+		
+		App\Providers\CategoryServiceProvider::class,
+		App\Providers\Goods\BrandServiceProvider::class,
+		App\Providers\TestServiceProvider::class,
+	
+		Barryvdh\Debugbar\ServiceProvider::class,
+		Codesleeve\LaravelStapler\Providers\L5ServiceProvider::class,
 
     ],
 
@@ -210,6 +217,9 @@ return [
 	    'Theme'     => Teepluss\Theme\Facades\Theme::class,
 		'Former'    => Former\Facades\Former::class,
 		
+		'Category'  => App\Facades\Category::class,
+		'Brand'     => App\Facades\Goods\Brand::class,
+ 		
 		'Menu'     => Lavalite\Menu\Facades\Menu::class,
         'Page'     => Lavalite\Page\Facades\Page::class,
         'Filer'    => Lavalite\Filer\Facades\Filer::class,
@@ -218,6 +228,7 @@ return [
         'Task'     => Lavalite\Task\Facades\Task::class,
         'Calendar' => Lavalite\Calendar\Facades\Calendar::class,
         'Message'  => Lavalite\Message\Facades\Message::class,
+		'Test'     =>App\Facades\Test::class,
 
     ],
 

@@ -23,6 +23,7 @@
 @endforeach
 </h4>
 @stop
+
 @section('content')
 <table id="main-list" class="table table-striped table-bordered">
     <thead>
