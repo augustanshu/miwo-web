@@ -13,13 +13,6 @@
             -> placeholder(trans('goods.category.placeholder.order'))!!}
         </div>
     </div>
-	<div class="row">
-	<div class="col-md-6">
-{!!Former::text('type_name')
-->label(trans('goods.category.label.type'))
-->placeholder(trans('goods.category.placeholder.type'))!!}
-  </div>
- </div>
     <div class="row">
         <div class="col-md-12 ">
             {!! Former::textarea('description')

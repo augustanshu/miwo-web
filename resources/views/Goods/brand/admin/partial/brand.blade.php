@@ -26,5 +26,20 @@
 ->placeholder(trans('goods.brand.placeholder.class'))!!}
 </div>
 </div>
+	
+<div class="row">
+<div class="col-md-6">
+{!!Former::file('avatar','商标图')
+->label(trans('goods.brand.label.img'))
+!!}
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+@if(isset($brand->avatar_file_name))
+<img src="<?= $brand->avatar->url('thumb') ?>" >
+@endif
+</div>
+</div>
 
 

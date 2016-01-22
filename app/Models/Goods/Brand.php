@@ -4,23 +4,26 @@ namespace App\Models\Goods;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Codesleeve\Stapler\ORM\StaplerableInterface;
+use Codesleeve\Stapler\ORM\EloquentTrait;
 
-class Brand extends Model 
+class Brand extends Model  implements StaplerableInterface
 {
+ use EloquentTrait;	
+	
  protected $dates=['delete_at'];
  protected $table = 'brands';
-     protected $casts = [
-        'banner' => 'array',
-        'images' => 'array',
-    ];
+ protected $fillable=['id','brand_initial','brand_name','class_id','brand_status','avatar'];
+	
 	
 	/*
- public function __construct()
+ public function __construct(array $attributes = array())
  {
-	 parent::__construct();
-	  $this->initialize();
+	 parent::__construct($attributes);
+	  
  }
  */
+ 
  
   public function __construct(array $attributes = array()) {
         $this->hasAttachedFile('avatar', [
@@ -29,9 +32,7 @@ class Brand extends Model
                 'thumb' => '100x100'
             ]
         ]);
-        parent::__construct();
         parent::__construct($attributes);
-		$this->initialize();
     }
 	
      /**
@@ -41,6 +42,6 @@ class Brand extends Model
      */
     public function initialize()
     {
-		$this->fillable = config('goods.brand.brand.listfields');
+		
     }
 }

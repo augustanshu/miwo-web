@@ -45,7 +45,7 @@ return
                                "type"                         =>'类型',
 							   "brand_initial"                =>'首字母缩写',
 							   "class"                        =>'分类名称',
-							   "file_img"                    =>'请选择商标'
+							   "img"                    =>'请选择商标'
                         
                             ],
 							

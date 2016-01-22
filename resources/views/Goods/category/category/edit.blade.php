@@ -4,7 +4,7 @@
 @while (isset($category['0.'.++$i]))
 	@if (($category['0.'.$i]->parent))
 		<li>
-	    <a href="{{URL::to('admin/goods/subcategory')}}/{!!$category['0.'.$i]->id!!}"data-target="category-entry"><i class="fa fa-square"></i>
+	    <a href="{{URL::to('admin/goods/subcategory')}}/{!!$category['0.'.$i]->id!!}"data-target="category-entry"><i class="fa"></i>
 	    {!!$category['0.'.$i]->name!!}
 		<span class='submenu-indicator'>+</span>
 		</a>

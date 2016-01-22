@@ -24,9 +24,9 @@ class CategoryAdminController extends AdminController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(CategoryRequest $request,$parent=1)
+    public function index(CategoryRequest $request,$parent=0)
     {
-		 $parent=$this->model->find($parent);
+		 $parent=$this->model->findOrNew($parent);
 		 return $this->theme->of('Goods.category.admin.index',compact('parent'))->render();
     }
 
@@ -49,8 +49,12 @@ class CategoryAdminController extends AdminController
     public function store(CategoryRequest $request)
     {
       try{
-		   $row = $this->model->create($request->all());
-
+		    $row = $this->model->create($request->all());
+			
+            $parent_id=$request->get('parent_id',0);
+			$parent=$this->model->find($parent_id);
+			$parent->is_parent="1";
+			$parent->save();
             return Response::json(['message' => 'Category created sucessfully', 'type' => 'success', 'title' => 'Success'], 201);
 	     }
 	  catch(Exception $e)

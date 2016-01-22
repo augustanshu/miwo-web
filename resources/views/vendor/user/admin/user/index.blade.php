@@ -56,7 +56,6 @@ $(document).ready(function(){
 
     $('.filter-role').on( 'click', function (e) {
         role = $( this ).data( "role" );
-
         oTable.ajax.url('{!! URL::to('/admin/user/user?role=') !!}' + role).load();
         e.preventDefault();
     });

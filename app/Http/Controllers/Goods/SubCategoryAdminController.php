@@ -59,18 +59,10 @@ class SubCategoryAdminController extends AdminController
      */
     public function show(CategoryRequest $request,$id)
     {
-	  if($id!=1)
-	  {
        $category=$this->model->findOrNew($id);
 	   Former::populate($category);
 	   return view('Goods.category.admin.sub.show',compact('category'));
-	  }
-	  else
-	  {
-	$category=$this->model->findOrNew($id);
-	   Former::populate($category);
-	   return view('Goods.category.admin.show',compact('category'));
-	  }
+	 
     }
 
     /**

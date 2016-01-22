@@ -71,22 +71,19 @@ class BrandAdminController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(BrandRequest $request,Brand $brand)
+    public function show(BrandRequest $request,$id=2)
     {
-        if(!$brand->exists)
-		{
-			if($request->wantsJson())
+		 if ($request->ajax()) {
+            $brand = $this->model->findOrNew($id);
+			if(!$brand->exists)
 			{
-				return [];
+				 return view('Goods.brand.admin.new');
 			}
-			return view('Goods.brand.admin.new');
-		}
-		if($request->wantsJson())
-		{
-			return $brand;
-		}
-		Former::populate($brnad);
-		return 111;
+			$category=Category::where('parent_id', '=', 1)->get()->lists('name','id')->toArray(); 
+            Former::populate($brand);
+			return view('Goods.brand.admin.show', compact('brand','category'));
+        }
+		return 'ddd';
     }
 
     /**
@@ -95,9 +92,13 @@ class BrandAdminController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(BrandRequest $request,$id)
     {
-        //
+       $category=Category::where('parent_id', '=', 1)->get()->lists('name','id')->toArray(); 
+        $brand = $this->model->find($id);
+        Former::populate($brand);
+        return  view('Goods.brand.brand.edit',compact('brand','category'));
+       
     }
 
     /**
@@ -107,9 +108,14 @@ class BrandAdminController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BrandRequest $request, $id)
     {
-        //
+        try {
+            $row = $this->model->update($request->all(), $id);
+			   return Response::json(['message' => 'Category updated sucessfully', 'type' => 'success', 'title' => 'Success'], 201);
+        } catch (Exception $e) {
+            return Response::json(['message' => $e->getMessage(), 'type' => 'error', 'title' => 'Error'], 400);
+        }
     }
 
     /**

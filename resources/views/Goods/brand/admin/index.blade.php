@@ -38,6 +38,6 @@
 
 @section('script')
 <script type="text/javascript">
-$('#entry-brand').load('{{URL::to('admin/goods/brand/1')}}');
+$('#entry-brand').load('{{URL::to('admin/goods/brand/0')}}');
 </script>
 @stop

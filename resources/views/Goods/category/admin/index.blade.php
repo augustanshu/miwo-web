@@ -30,7 +30,7 @@
 <div  class="col-md-5">
  <div class="box box-warning tab-content">
   <div class="tab-pane active" id="details">
-{!!Category::category($parent->id,'edit')!!}
+{!!Category::category(0,'edit')!!}
 </div>
 </div>
 </div>
@@ -42,8 +42,7 @@
 @section('script')
 <script type="text/javascript">
 $(document).ready(function(){
-
-$('#category-entry').load('{{URL::to('admin/goods/category')}}/{{$parent->id}}');
+$('#category-entry').load('{{URL::to('admin/goods/category/0')}}');
 var defaults = {
     speed: 200,
     showDelay: 0,

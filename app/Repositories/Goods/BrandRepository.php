@@ -22,7 +22,7 @@ class BrandRepository extends BaseRepository implements BrandRepositoryInterface
 	*/
 	public function getBrandAll()
 	{	
-           $brand=DB::table('brands')->select('brands.id','brand_name','brand_initial','name','brand_pic')->join('categories','class_id','=','categories.id')->get();
+           $brand=DB::table('brands')->select('brands.id','brand_name','brand_initial','name')->join('categories','class_id','=','categories.id')->get();
 
             return $brand;	
 	}

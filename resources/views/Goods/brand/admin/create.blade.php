@@ -42,8 +42,8 @@ $('#create-brand')
             contentType: false,
             success:function(data, textStatus, jqXHR)
             {
-				 $('#brand_table').DataTable().ajax.reload( null, false );
-                $('#entry-brand').load('{{URL::to('admin/goods/brand/1')}}');
+				 $('#main-list').DataTable().ajax.reload( null, false );
+                $('#entry-brand').load('{{URL::to('admin/goods/brand/0')}}');
             },
             error: function(jqXHR, textStatus, errorThrown)
             {

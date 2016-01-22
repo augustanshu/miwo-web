@@ -31,7 +31,7 @@
 <script type="text/javascript">
 (function ($) {
     $('#btn-category-close').click(function(){
-        $('#category-entry').load('{!!URL::to('admin')!!}/goods/subcategory/{!!$category->parent_id!!}');
+        $('#category-entry').load('{!!URL::to('admin')!!}/goods/subcategory/{!!$category->id!!}');
 	});
 	
 	$('#btn-category-save').click(function(){
@@ -48,7 +48,7 @@
 			contentType:false,
 			success:function(data,textStatus,jqXHR)
 			{
-				window.location.reload();
+				$('#category-entry').load('{!!URL::to('admin')!!}/goods/subcategory/{!!$category->id!!}');
 			},
 			error:function(jqXHR,textStatus,errorThrown)
 			{}
