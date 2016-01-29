@@ -8,4 +8,5 @@ class CategoryItemProp extends Model
 {
     protected $tables='category_item_props';
 	
+	
 }

@@ -39,18 +39,6 @@ class CategoryItemPropTableSeeder extends Seeder
 		],
 		[
 		 'id'=>3,
-		 'name'=>'编码',
-		 'parent_pid'=>0,
-		 'parent_vid'=>0,
-		 'is_key_prop'=>'1',
-		 'is_erp'=>'1',
-		 'is_must'=>'0',
-		 'desc'=>'ERP编码',
-		 'is_enum_prop'=>'0',
-		 'is_input_prop'=>'0',
-		],
-		[
-		 'id'=>4,
 		 'name'=>'规格',
 		 'parent_pid'=>0,
 		 'parent_vid'=>0,
@@ -62,7 +50,7 @@ class CategoryItemPropTableSeeder extends Seeder
 		 'is_input_prop'=>'0',
 		],
 		[
-		 'id'=>5,
+		 'id'=>4,
 		 'name'=>'单位',
 		 'parent_pid'=>0,
 		 'parent_vid'=>0,

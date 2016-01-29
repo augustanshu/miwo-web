@@ -160,7 +160,8 @@ return [
 		App\Providers\CategoryServiceProvider::class,
 		App\Providers\Goods\BrandServiceProvider::class,
 		App\Providers\TestServiceProvider::class,
-	
+	    App\Providers\Goods\ProductServiceProvider::class,
+		
 		Barryvdh\Debugbar\ServiceProvider::class,
 		Codesleeve\LaravelStapler\Providers\L5ServiceProvider::class,
 
@@ -219,7 +220,8 @@ return [
 		
 		'Category'  => App\Facades\Category::class,
 		'Brand'     => App\Facades\Goods\Brand::class,
- 		
+ 		'Product'    =>App\Facades\Goods\Product::class,
+		 
 		'Menu'     => Lavalite\Menu\Facades\Menu::class,
         'Page'     => Lavalite\Page\Facades\Page::class,
         'Filer'    => Lavalite\Filer\Facades\Filer::class,

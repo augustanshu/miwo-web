@@ -2,18 +2,14 @@
 namespace App;
 use View;
 use App\Interfaces\CategoryRepositoryInterface;
-
-class Category
+use Illuminate\Database\Eloquent\Model;
+class Category 
 {
 	protected $model;
 	protected $categoryBuilder;
 	public function __construct(CategoryRepositoryInterface $category)
 	{
 		$this->model=$category;
-	}
-	public function something()
-	{
-		echo '123444';
 	}
 	public function model()
 	{
@@ -32,4 +28,5 @@ class Category
 
         #return View::make("menu::menu.$view", compact('menu'));
     }
+
 }

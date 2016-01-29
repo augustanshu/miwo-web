@@ -31,6 +31,8 @@ return [
     'manage'         => '管理',
     'more'           => '更多',
     'new'            => ' 新增',
+	'soldout'           => '下架',
+	'soldon'           => '上架',
     'no'             => 'No',
     'opt'            => 'Options',
     'option'         => 'Option',

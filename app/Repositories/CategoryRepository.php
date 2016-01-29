@@ -1,5 +1,6 @@
 <?php
 namespace App\Repositories;
+use DB;
 use Request;
 use URL;
 use App\Models\Category as Category;
@@ -18,7 +19,35 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
     {
         return 'App\\Models\\Category';
     }
-
+	
+	/*
+	*返回绑定的Prop表值
+	*
+	*
+	*/
+    public function hasOneProp($model)
+	{
+		return $model->hasOne('App\Models\Goods\CategoryBindProp','cid','id');
+	}
+	
+	/**
+	*返回绑定的Prop属性值
+	*
+	*
+	*/
+	public function getProp($model)
+	{
+	   $items=[];//所有的关联属性;
+	   $clp=$this->hasOneProp($model)->get();
+	   if($clp->count()>0)
+	   {
+	   $item_ids=$clp->first()->props;
+	   $props=explode(';',$item_ids);
+	   $items=DB::table('category_item_props') ->whereIn('id',$props) ->get();
+	   }
+	   return $items;
+	}
+	
     /**
      * Return submenu of given parent.
      *

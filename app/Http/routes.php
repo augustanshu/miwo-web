@@ -56,4 +56,7 @@ Route::group(['prefix'=>'admin/goods','namespace'=>'Goods'],function(){
 	Route::resource('category','CategoryAdminController');
 	Route::resource('subcategory','SubCategoryAdminController');
 	Route::resource('brand','BrandAdminController');
+	Route::resource('product','ProductAdminController');
+	Route::get('test','ProductAdminController@test');
+	Route::post('product/{id}/onoff', 'ProductAdminController@onoff');//不安全
 });

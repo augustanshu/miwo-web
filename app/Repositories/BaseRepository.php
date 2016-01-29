@@ -4,6 +4,7 @@ namespace App\Repositories;
 use Illuminate\Container\Container as Application;
 use Illuminate\Database\Eloquent\Model;
 use App\Interfaces\BaseRepositoryInterface;
+
 abstract class BaseRepository implements BaseRepositoryInterface
 {
 	/**
@@ -542,4 +543,13 @@ abstract class BaseRepository implements BaseRepositoryInterface
 
         return $this;
     }
+	
+	public function hasOne($related, $foreignKey = null, $localKey = null)
+	{
+		$model2=$this->model->hasOne($related, $foreignKey, $localKey);
+		return $model2;
+	}
+	
+	
+	
 }

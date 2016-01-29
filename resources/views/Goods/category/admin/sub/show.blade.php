@@ -39,7 +39,7 @@ $(document).ready(function(){
 		
 		$('#btn-category-delete').click(function(){
 			swal({
-			 title: "确定删除?",
+			title: "确定删除?",
             text: "删除后该分类无法恢复",
             type: "warning",
             showCancelButton: true,

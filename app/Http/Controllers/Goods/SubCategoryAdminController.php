@@ -1,13 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Goods;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController as AdminController;
 use Former;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category as Category;
 use App\Interfaces\CategoryRepositoryInterface;
+use App\Models\Goods\CategoryItemProp;
+
 class SubCategoryAdminController extends AdminController
 {
 	public function __construct(CategoryRepositoryInterface $category)
@@ -59,10 +61,10 @@ class SubCategoryAdminController extends AdminController
      */
     public function show(CategoryRequest $request,$id)
     {
-       $category=$this->model->findOrNew($id);
+	   $category=$this->model->findOrNew($id);
+	   $items=$this->model->getProp($category);
 	   Former::populate($category);
-	   return view('Goods.category.admin.sub.show',compact('category'));
-	 
+	   return view('Goods.category.admin.sub.show',compact('category','items'));
     }
 
     /**

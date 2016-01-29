@@ -41,6 +41,7 @@
         "App\\Providers\\CategoryServiceProvider",
         "App\\Providers\\Goods\\BrandServiceProvider",
         "App\\Providers\\TestServiceProvider",
+        "App\\Providers\\Goods\\ProductServiceProvider",
         "Barryvdh\\Debugbar\\ServiceProvider",
         "Codesleeve\\LaravelStapler\\Providers\\L5ServiceProvider"
     ],
@@ -72,6 +73,7 @@
         "App\\Providers\\CategoryServiceProvider",
         "App\\Providers\\Goods\\BrandServiceProvider",
         "App\\Providers\\TestServiceProvider",
+        "App\\Providers\\Goods\\ProductServiceProvider",
         "Barryvdh\\Debugbar\\ServiceProvider",
         "Codesleeve\\LaravelStapler\\Providers\\L5ServiceProvider"
     ],

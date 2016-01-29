@@ -21,3 +21,15 @@
 ->placeholder(trans('goods.category.placeholder.description'))!!}
 </div>
 </div>
+<div class="row">
+<div class="col-md-12">
+@if($category->is_parent==0)
+@include('Goods.category.admin.props')
+@endif
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+
+</div>
+</div>

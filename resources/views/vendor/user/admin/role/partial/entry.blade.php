@@ -15,7 +15,8 @@
                 <td>{{ucfirst($keyPermission)}}</td>
                 <td>
                     @forelse($permission as $key => $val)
-                    &nbsp; <input name="permissions[{{ $keyPermission. '.' .$key }}]" type="checkbox" {{ @array_key_exists($keyPermission. '.' .$key, $role->permissions) ? 'checked' : '' }} value='1'> {{$val}}
+					
+                    &nbsp; <input name="permissions[{{ $keyPermission. '.' .$key }}]" type="checkbox" {{ @array_key_exists($keyPermission. '.' .$key, $role->permissions) ? 'checked':'' }} value='1'> {{$val}}
                     @empty
                     No permissions assigned
                     @endforelse

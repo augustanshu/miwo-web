@@ -89,9 +89,10 @@ class CategoryAdminController extends AdminController
      */
     public function edit(CategoryRequest $request,$id)
     {
-        $data['category']=$this->model->find($id);
-		Former::populate($data['category']);
-		return view('Goods.category.admin.edit',$data);
+        $category=$this->model->find($id);
+	    $items=$this->model->getProp($category);
+		Former::populate($category);
+		return view('Goods.category.admin.edit',compact('category','items'));
     }
 
     /**
