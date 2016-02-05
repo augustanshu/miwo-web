@@ -37,6 +37,9 @@ $(document).ready(function(){
 	$('#btn-edit').click(function(){
 		$('#entry-product').load('{{URL::to('admin/goods/product')}}/{{$product->id}}/edit');
 	});
+		$('#btn-new').click(function(){
+		$('#entry-product').load('{{URL::to('admin/goods/product')}}/create');
+	});
 	
 	$('#btn-delete').click(function(){
 		swal({

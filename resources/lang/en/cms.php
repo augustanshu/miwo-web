@@ -48,7 +48,8 @@ return [
     'update'         => '更新',
     'view'           => 'View',
     'yes'            => 'Yes',
-
+    'select-category' =>'选择类目',
+	
     'flash.success'  => 'Success',
     'flash.error'    => 'Error',
     'flash.warning'  => 'Warning',

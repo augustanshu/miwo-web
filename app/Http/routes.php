@@ -60,3 +60,7 @@ Route::group(['prefix'=>'admin/goods','namespace'=>'Goods'],function(){
 	Route::get('test','ProductAdminController@test');
 	Route::post('product/{id}/onoff', 'ProductAdminController@onoff');//不安全
 });
+Route::group(['prefix'=>'u'],function(){
+	Route::post('showCategory','Goods\CategoryAdminController@data');
+	Route::get('showCategory','Goods\CategoryAdminController@data');
+});

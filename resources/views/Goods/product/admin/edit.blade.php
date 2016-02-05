@@ -48,6 +48,10 @@
             data: new FormData( this ),
             processData: false,
             contentType: false,
+			 beforeSubmit: function(data) {
+             //给表单中某个隐藏值赋值
+              //document.getElementById("oscId").value= '123';
+              },
             success:function (data, textStatus, jqXHR)
             {
 				

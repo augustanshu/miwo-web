@@ -22,8 +22,29 @@
 @if(isset($product->cid))
 <div class="cole-md-12 col-sm-12">
 {!!Former::text('cname')
+->disabled()
 ->label(trans('goods.product.label.category'))
 ->placeholder(trans('goods.product.placeholder.category'))
+!!}
+<!--
+<label class="name">{{trans('goods.category.name')}}</label>
+<select class="form-control" name="items" id="category">
+<option></option>
+</select>
+<div class="pull-right">
+<button class="btn btn-xs">编辑</button>
+</div>
+-->
+
+{!!Former::hidden('cid')
+!!}
+</div>
+<div class="cole-md-12 col-sm-12">
+{!!Former::hidden('props')
+!!}
+{!!Former::hidden('input_pids')
+!!}
+{!!Former::hidden('input_str')
 !!}
 </div>
 @endif
@@ -77,3 +98,24 @@
 @endif
 @endwhile
 </div>
+<script type="text/javascript">
+(function($){
+	$.ajax({
+		    type:"POST",  
+            url:"/u/showCategory",  
+            data:{}, 
+            dataType:"json",  
+			error:function(){            },
+            success:function(msg){  
+			var friends = $("#category");
+               
+			$.each(msg,function(key,val){
+				/*
+                var option = $("<option>").text(val["name"]).val(val["name"])
+                friends.append(option);
+				*/
+			});
+			}
+	});  
+}(jQuery));
+</script>

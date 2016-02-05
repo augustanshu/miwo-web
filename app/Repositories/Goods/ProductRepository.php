@@ -16,17 +16,18 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 		return 'App\\Models\\Goods\\Product';
 	}
 	
-
+    
 	/*
-	*返回绑定的Prop表值
+	*返回绑定的Prop表值（暂时没用）
 	*
 	*
 	*/
-	
+	 /*
     public function hasOneC($model)
 	{
 		return $model->hasOne('App\Models\Category','id','cid');
 	}
+	*/
 	
 	/**
 	*返回绑定的Prop属性值
@@ -74,6 +75,22 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 		->get();
 		return $result;
 	}
+	
+	    /**
+    *通过props中可枚举PID值获取其下的可选值
+	*
+	*
+	*
+	*/
+	public function _getEnum($pid)
+	{
+		$result=DB::table('category_prop_values')
+		->select('*')
+		->where('pid',$pid)
+		->get();
+		return $result;
+	}
+	
 	/*
 	*获取可枚举的商品属性以及值
 	*
@@ -91,7 +108,8 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 				$vid=intval($item[1]);
 				$p=$this->_getProp($pid);
 				$v=$this->_getValue($vid);
-				$val=array($p[0],$v[0]->name);
+				$s=$this->_getEnum($pid);
+				$val=array($p[0],$v[0]->id,$s);
                 Array_push($array, $val); 
 			}
 			return $array;
@@ -99,7 +117,7 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 	
 	/*
 	*获取可输入的商品属性以及值
-	*
+	*$model $model->input_pids  $model->input_str
 	*
 	*/
 	public function getPropInputValue($model)
@@ -120,5 +138,19 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
 			};
 			return $array;
 	}
+	
+	    /**
+     * Retrive users list based on role
+     *
+     * @param string $role
+     * @param array $columns
+     * @return mixed
+     */
+    public function category( $columns = ['*'])
+    {
+        $results = $this->model->with('bindprops')->first();
+        $this->resetModel();
+        return $results->bindprops;
+    }
 
 }

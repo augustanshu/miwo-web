@@ -28,7 +28,7 @@ class ProductAdminController extends AdminController
     {
       if($request->wantsJson())
 	  {
-		   $array=DB::table('products')
+		 $array=DB::table('products')
 		 ->join('categories','products.cid','=','categories.id')
 		 ->select('products.*','categories.name as cname')
 		 ->get();
@@ -42,9 +42,12 @@ class ProductAdminController extends AdminController
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(ProductAdminRequest $request)
     {
-        //
+            $product=$this->model->findOrNew(0);
+		    Former::populate($product);
+			return view('Goods.product.admin.partial.create_init', compact('product'));
+		
     }
 
     /**
@@ -75,7 +78,6 @@ class ProductAdminController extends AdminController
        if($request->ajax())
 	   {
 		   $product=$this->model->findOrNew($id);
-		   $p->id=1;
 		   if(!$product->exists)
 		   {
 			   return view('Goods.product.admin.new');
@@ -86,25 +88,7 @@ class ProductAdminController extends AdminController
 			$array_input=$this->model->getPropInputValue($product);
 		    Former::populate($product);
 			return view('Goods.product.admin.show', compact('product','array','array_input'));
-	    }
-		    $product=$this->model->findOrNew($id);
-			$p=new Product;
-			$p->name="1111";
-			 $product=$this->model->getBinds($product);
-			$product=$product[0];
-            $array=$this->model->getPropEnumValue($product);
-			$array_input=$this->model->getPropInputValue($product);
-		    Former::populate($p);
-			return view('Goods.product.admin.show', compact('product','array','array_input'));
-			/*
-		    $product=$this->model->getBinds($product);
-			$product=$product[0];
-            $array=$this->model->getPropEnumValue($product);
-			$array_input=$this->model->getPropInputValue($product);
-		    Former::populate($product);
-			return view('Goods.product.admin.show', compact('product','array','array_input'));
-	        */
-
+	      }
     }
 
     /**

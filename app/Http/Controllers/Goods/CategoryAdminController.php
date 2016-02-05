@@ -19,6 +19,19 @@ class CategoryAdminController extends AdminController
 		$this->model=$category;
 		parent::__construct();
 	}
+	public function data(CategoryRequest $request)
+	{
+		     $rank=$request->get("rank");
+			  $array = $this->model->findParent($rank)->get();
+			  if($array->count()>0)
+			  {
+                return  ['flag'=>"true",'data'=>$array];
+			  }
+			  else
+			  {
+				 return ['flag'=>"false"];
+			  }
+	}
     /**
      * Display a listing of the resource.
      *
@@ -26,6 +39,12 @@ class CategoryAdminController extends AdminController
      */
     public function index(CategoryRequest $request,$parent=0)
     {
+		if($request->wantsJson())
+		{
+			 //$array = $this->model->json();
+             //return  ['data'=>$array];
+			 return '134';
+		}
 		 $parent=$this->model->findOrNew($parent);
 		 return $this->theme->of('Goods.category.admin.index',compact('parent'))->render();
     }

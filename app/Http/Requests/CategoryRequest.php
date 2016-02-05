@@ -49,7 +49,7 @@ class CategoryRequest extends Request
         // validation rule for create request.
         if ($request->isMethod('POST')) {
             return [
-                'name' => 'required',
+               
             ];
         }
 
